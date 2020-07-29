@@ -6,7 +6,7 @@ const addNewTask = (text) => {
     taskNumber += 1; 
     let fragment = new DocumentFragment();
     let list = document.createElement("li")
-    let inputTask = document.createElement("input")
+    let checkBox = document.createElement("input")
 
     checkBox.setAttribute("type", "checkbox")
     checkBox.setAttribute("id", "taskCheckbox"+taskNumber)
