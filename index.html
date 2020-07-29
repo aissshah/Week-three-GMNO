@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <!-- <link href=" - font goes here - " rel="stylesheet"> -->
+=======
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+>>>>>>> master
     <link rel="stylesheet" href="style.css">
+
     <script src="script.js" defer></script>
     <title>TO-DO</title>
 </head>
@@ -12,8 +19,9 @@
 <body>
     <header>
         <h1 class="body__title">TO-DO</h1> 
-        <form class="input__task" role="search">
+        <form class="input" role="search">
             <label for="userInput"></label>
+<<<<<<< HEAD
             <input type="text" id="userInput"  class="user__input" role="new-task" placeholder="Add a task...">
             <button type= "submit" id="submitBtn" class="submit__task">+</button> 
         </form> 
@@ -23,6 +31,44 @@
        <ol id="ordered__list">
 
        </ol>
+=======
+            <input type="text" id="userInput"  class="input__task" role="new-task" placeholder="Add a task...">
+            <button type = "submit" class="submit__task">Add</button> 
+        </form> 
+    </header>
+    
+    <main>
+        <label for="file">Tasks progress</label>
+        <progress id="file" max="100" value="70"> 70% </progress>
+
+        <section class="todo__cards">
+            <section class="toggle__buttons">
+                <button class="todo__toggld">To-do</button>
+                <button class="finished__toggle">Finished</button>
+            </section>
+
+            <form class="search__area" role="search">
+                <label for="userInput"></label>
+                <input type="text" id="userInput"  class="search__bar" role="searchbox" placeholder="Find...">
+                <button type = "submit" class="search__task"><i class="fas fa-search"></i></button> 
+            </form> 
+
+            <article class="todo__board">
+                <p>1. bla</p>
+                <p>2. bla</p>
+            </article>
+
+            <article class="finished__board" >
+                <p>1. bla</p>
+                <p>2. bla</p>
+            </article>
+
+        </section>
+       
+        <!-- <i class="fas fa-search"></i>
+        <i class="fas fa-trash-alt"></i>
+         -->
+>>>>>>> master
     </main>
 
     <footer>

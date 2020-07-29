@@ -1,0 +1,81 @@
+:root {
+    --grey : hsl(226, 13%, 38%);
+    --dark-green : hsl(177, 20%, 61%);
+    --light-green : hsl(167, 40%, 82%);
+    --apricot : hsl(24, 100%, 86%);
+    --primary-font : 'Nunito', sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space between;
+    align-items: center;
+    width: 100%;
+
+
+    /* margin: 0 auto; */
+}
+
+.body__title {
+    text-align: center;
+}
+
+.input {
+    width: 100%;
+
+}
+.input__task {
+    width: 50%;
+    border: none;
+    box-shadow: 0 2px 5px rgba(41, 37, 37, 0.74);
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    border-radius: 2rem;    
+}
+.submit__task {
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    margin-left: 7px;
+    border-radius: 2rem;
+}
+
+/* ------ Progress bar ---------- */
+progress[value] {
+    -webkit-appearance: none;
+    appearance: none;
+    /* width: 250px;
+    height: 20px; */
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+progress[value]::-webkit-progress-value {
+    background-color: var(--dark-green) ;
+    border-radius: 2px; 
+}
+
+/* ------- To-do cards ----------- */
+.todo__cards {
+    border: 2px solid black;
+    width: 90vw;
+    
+}
+.todo__board {
+      border: 2px solid black;      
+      background-color: aqua;
+}
+
+.hidden {
+    display: none;
+}
+
+.finished__board {
+    border: 2px solid black;    
+}
