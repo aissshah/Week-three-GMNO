@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href=" - font goes here - " rel="stylesheet">
+    <!-- <link href=" - font goes here - " rel="stylesheet"> -->
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     <title>TO-DO</title>
@@ -14,13 +14,15 @@
         <h1 class="body__title">TO-DO</h1> 
         <form class="input__task" role="search">
             <label for="userInput"></label>
-            <input type="text" id="userInput"  class="submit__task" role="new-task" placeholder="Add a task...">
-            <button type = "submit" class="submit__task">+</button> 
+            <input type="text" id="userInput"  class="user__input" role="new-task" placeholder="Add a task...">
+            <button type= "submit" id="submitBtn" class="submit__task">+</button> 
         </form> 
     </header>
     
     <main>       
-        
+       <ol id="ordered__list">
+
+       </ol>
     </main>
 
     <footer>
