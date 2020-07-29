@@ -27,25 +27,32 @@
         <progress id="file" max="100" value="70"> 70% </progress>
 
         <section class="todo__cards">
-            <section class="toggle__buttons">
-                <button class="todo__toggld">To-do</button>
-                <button class="finished__toggle">Finished</button>
+            <section class="todo__cards--nav">
+                <section class="toggle__buttons">
+                    <button class="toggle__button todo__toggle">To-do</button>
+                    <button class="toggle__button finished__toggle">Finished</button>
+                </section>
+    
+                <form class="search__area" role="search">
+                    <label for="userInput"></label>
+                    <input type="text" id="userInput"  class="search__bar" role="searchbox" placeholder="Find...">
+                    <button type = "submit" class="search__icon"><i class="fas fa-search"></i></button> 
+                </form> 
             </section>
-
-            <form class="search__area" role="search">
-                <label for="userInput"></label>
-                <input type="text" id="userInput"  class="search__bar" role="searchbox" placeholder="Find...">
-                <button type = "submit" class="search__task"><i class="fas fa-search"></i></button> 
-            </form> 
+           
 
             <article class="todo__board">
-                <p>1. bla</p>
-                <p>2. bla</p>
+                <ol id="ordered__list">
+                    <li>Finish our project</li>
+                    <li>have a good evening</li>
+                </ol>
             </article>
 
-            <article class="finished__board" >
-                <p>1. bla</p>
-                <p>2. bla</p>
+            <article class="finished__board hidden" >
+                <ol>
+                    <li>Finish our project</li>
+                    <li>have a good evening</li>
+                </ol>
             </article>
 
         </section>
