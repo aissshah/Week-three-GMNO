@@ -1,5 +1,6 @@
 :root {
-    --grey : hsl(226, 13%, 38%);
+    /* --grey : hsl(90, 1%, 59%);  */
+    --grey : hsl(135, 19%, 88%);    
     --dark-green : hsl(177, 20%, 61%);
     --light-green : hsl(167, 40%, 82%);
     --apricot : hsl(24, 100%, 86%);
@@ -14,6 +15,7 @@ body {
     justify-content: space between;
     align-items: center;
     width: 100%;
+    /* background-color: var(); */
 
 
     /* margin: 0 auto; */
@@ -34,48 +36,114 @@ body {
     font-size: 1.2rem;
     padding: 10px 15px;
     margin-bottom: 30px;
-    border-radius: 2rem;    
+    border-radius: 0.6rem; 
+    background-color: var(--light-green ) ;
+   
 }
 .submit__task {
+    border: none;
+    box-shadow: 0 2px 5px rgba(41, 37, 37, 0.74);
     font-size: 1.2rem;
     padding: 10px 15px;
-    margin-left: 7px;
-    border-radius: 2rem;
+    margin-left: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--light-green );
 }
 
 /* ------ Progress bar ---------- */
+progress {
+    width: 100%;
+}
+
 progress[value] {
     -webkit-appearance: none;
     appearance: none;
-    /* width: 250px;
-    height: 20px; */
 }
 
 progress[value]::-webkit-progress-bar {
     background-color: #eee;
     border-radius: 2px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.44) inset;
 }
 progress[value]::-webkit-progress-value {
-    background-color: var(--dark-green) ;
+    background-color:  var(--dark-green ) ;
     border-radius: 2px; 
 }
 
+
+/* -------------- */
+
+
+ .todo__cards--nav {
+    
+     flex-direction: column;
+ }
+
+.toggle__buttons {
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-end;
+    align-items: center; */
+}
+.toggle__button {
+    border: none;
+    box-shadow: 0 2px 5px rgba(148, 235, 206, 0.342);
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    margin-left: 0.5rem;
+    border-radius: 0.6rem;
+    background-color: var(--dark-green ) ;
+}
+
+
+.search__area {
+
+}
+
+.search__bar {
+   width: 80%; 
+   border: none;
+   box-shadow: 0 2px 5px rgba(41, 37, 37, 0.74);
+   font-size: 1.2rem;
+   padding: 10px 15px;
+   margin-top: 0.5rem;
+   border-radius: 0.6rem; 
+   background-color: var(--dark-green ) ;
+}
+
+.search__icon {
+    background-color: var(--dark-green);
+    width: 10%;
+    height: 2.8rem;
+    border-radius: 0.6rem; 
+
+}
+
+
+
+
+
 /* ------- To-do cards ----------- */
 .todo__cards {
-    border: 2px solid black;
-    width: 90vw;
-    
+    /* border: 2px solid black; */
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 80vw;
+    border-radius: 2rem;
+    /* background-color: ;     */
+    background-color: var(--grey);    
+
 }
-.todo__board {
-      border: 2px solid black;      
-      background-color: aqua;
+.todo__board, .finished__board {
+     padding: 1rem;
+     margin-top: 3rem;
+     line-height: 2.7rem;
+     color: var(--light-green);
+     font-size: 1.5rem;
+     font-weight: bold;
 }
 
 .hidden {
     display: none;
 }
 
-.finished__board {
-    border: 2px solid black;    
-}
