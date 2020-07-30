@@ -4,7 +4,7 @@
 
 # What to do what to do 
 
-This week, we built a to-do list app. It allows a users to create, complete and delete tasks from a list, and be responsive for as many users as possible. 
+This week, we built a to-do list app. It allows a users to create, complete and delete tasks from a list, and also stores 'done' tasks in a seperate 'folder'. We built the elements for search and a task completion progress bar but we didn't get time to get them functional. 
 
 We also learnt how to make automated tests covering our main user stories. 
 
