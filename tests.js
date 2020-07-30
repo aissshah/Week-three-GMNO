@@ -1,3 +1,5 @@
+// TESTS SHOULD BE SELF-CONTAINED AND ISOLATED,  IF ONE TEST FAILS IT DOESNT AFFECT ANOTHER TEST
+
 test("Submitting a new task adds it to the list", t => {
     const expected = document.querySelector(".todo").childElementCount;
     const result = document.getElementsByTagName("li");

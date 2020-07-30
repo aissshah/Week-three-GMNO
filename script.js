@@ -84,14 +84,3 @@ finishedButtonTog.addEventListener('keyup', (e) => {
     }
     
 });
-
-// HTML CSS JSResult
-// EDIT ON
-// let button = document.querySelector('#button');
-// let msg = document.querySelector('#message');
-
-// button.addEventListener('click', ()=>{
-//   msg.classList.toggle('reveal');
-// })
-
-
