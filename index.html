@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
-    <script src="script.js" defer></script>
+    
     <title>TO-DO</title>
 </head>
 
@@ -18,7 +18,7 @@
         <form class="input" role="search">
             <label for="userInput"></label>
             <input type="text" id="userInput"  class="input__task" role="new-task" placeholder="Add a task...">
-            <button type = "submit" class="submit__task">Add</button> 
+            <button type ="submit" class="submit__task" id="submitBtn">Add</button> 
         </form> 
     </header>
     
@@ -43,15 +43,15 @@
 
             <article class="todo__board">
                 <ol id="ordered__list">
-                    <li>Finish our project</li>
-                    <li>have a good evening</li>
+                    <!-- <li>Finish our project</li>
+                    <li>have a good evening</li> -->
                 </ol>
             </article>
 
             <article class="finished__board hidden" >
                 <ol>
-                    <li>Finish our project</li>
-                    <li>have a good evening</li>
+                    <!-- <li>Finish our project</li>
+                    <li>have a good evening</li> -->
                 </ol>
             </article>
 
@@ -64,6 +64,10 @@
 
     <footer>
     </footer>
+    
+    <script src="script.js"></script>
+    <script src="test-helpers.js"></script>
+    <script src="tests.js"></script>
 </body>
 
 

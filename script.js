@@ -1,56 +1,47 @@
 //Global Variables
 let taskNumber = 0;
+const orderedList = document.querySelector('#ordered__list');
 
 //Functions
 const addNewTask = (text) => {
     taskNumber += 1; 
     let fragment = new DocumentFragment();
-    let list = document.createElement("li")
+    let task = document.createElement("li")
     let checkBox = document.createElement("input")
 
     checkBox.setAttribute("type", "checkbox")
     checkBox.setAttribute("id", "taskCheckbox"+taskNumber)
     checkBox.classList.add("check__box")
     let userTask = document.createElement("label")
+
     userTask.setAttribute("for", "taskCheckbox"+taskNumber)
     let deleteBtn = document.createElement("button")
+    deleteBtn.classList.add("delete__btn")
 
     deleteBtn.textContent = 'delete'
     userTask.innerHTML = text 
 
-    fragment.appendChild(list);
-    list.appendChild(checkBox);
-    list.appendChild(userTask);
-    list.appendChild(deleteBtn);
-    
-    
-    const orderedList = document.querySelector('#ordered__list');
+    fragment.appendChild(task);
+    task.appendChild(checkBox);
+    task.appendChild(userTask);
+    task.appendChild(deleteBtn);
+
     orderedList.appendChild(fragment);
 }
 
-const deleteTask = () => {
 
-}
-
-
-
-
-//Event Listeners
+//Submit task   
 const addTask = document.getElementById('submitBtn') //refers to the submit button
-console.log(addTask)
 addTask.addEventListener('click', (event)=>{
     event.preventDefault(); 
     const task = document.getElementById("userInput").value
     addNewTask(task);
 })
 
-// HTML CSS JSResult
-// EDIT ON
-// let button = document.querySelector('#button');
-// let msg = document.querySelector('#message');
-
-// button.addEventListener('click', ()=>{
-//   msg.classList.toggle('reveal');
-// })
-
-
+//Delete task
+orderedList.addEventListener('click', (event) => {
+    if(event.target.className == 'delete__btn'){
+        const li = event.target.parentElement
+        orderedList.removeChild(li)
+    }
+})
