@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="test-helpers.js" defer></script>
-    <script src="script.js" defer></script>
-    <script src="tests.js" defer></script>
+
     <title>TO-DO</title>
 </head>
 
@@ -19,7 +17,7 @@
         <form class="input" role="search">
             <label for="userInput"></label>
             <input type="text" id="userInput"  class="input__task" role="new-task" placeholder="Add a task...">
-            <button type = "submit" class="submit__task">Add</button> 
+            <button type ="submit" class="submit__task" id="submitBtn">Add</button> 
         </form> 
     </header>
     
@@ -65,6 +63,10 @@
 
     <footer>
     </footer>
+    
+    <script src="script.js"></script>
+    <script src="test-helpers.js"></script>
+    <script src="tests.js"></script>
 </body>
 
 
