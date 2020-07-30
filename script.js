@@ -111,3 +111,31 @@ orderedList.addEventListener("click", (event) => {
   }
  
 });
+
+
+// Get checked tasks 
+
+// find the checked task , return its text content
+// for (let i = 0; i < myNodeList.length; i++) {
+//     let item = myNodeList[i];
+//   }
+
+// const list = document.querySelectorAll('input[type=checkbox]');
+// {
+//   checkbox.checked = true;
+// }
+
+const finishedSection = document.getElementById("finished")
+
+document.addEventListener("click", e => {
+    if (e.target.type === "checkbox"){
+        if(e.target.checked) {
+            orderedList.removeChild(e.target.parentElement)
+            finishedSection.appendChild(e.target.parentElement)
+        }
+        else{
+            finishedSection.removeChild(e.target.parentElement)
+            orderedList.appendChild(e.target.parentElement)  
+        }
+    }
+})

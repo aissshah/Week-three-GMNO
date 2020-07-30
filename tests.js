@@ -68,13 +68,73 @@ test("Clicking input should add a list item", t => {
 
 //   });
 
-  test("Deleting an entry removes it from the list", t => {
+test("Deleting an entry removes it from the list", t => {
     const deleteTasks = document.querySelectorAll('.delete__btn');
     let taskNum = deleteTasks.length;
     const expected = taskNum -1;
-    
-  });
+});
 
 
 
-  
+// ---------------------------------------------------------------------------------------------
+//  Moving checked items into finished section
+// ---------------------------------------------------------------------------------------------
+
+// check what task has been checked
+//  if a task has been checked -> remove from to do section
+//                              -> add it to finished section
+function check() {
+    document.getElementById("taskCheckbox1").checked = true; 
+}
+
+function uncheck() {
+    document.getElementById("taskCheckbox1").checked = false;
+}
+
+test("The selected task has been checked", t => {
+    check();
+    const result = document.getElementById("taskCheckbox1").checked 
+    const expected = true; 
+
+    t.equal(result, expected);
+    uncheck();
+})
+
+test("Selected task is accessible", t => {
+    check();
+    const result = document.getElementById("taskCheckbox1").nextSibling.textContent
+    const expected = "Add a todo list item"
+
+    t.equal(result, expected);
+    uncheck()
+})
+
+// test("Checking a task removes it from the to-do section and adds it to the finished section", t => {
+//     const result = orderedList.childElementCount;
+//     check()
+//     orderedList.removeChild(document.getElementById("taskCheckbox1"))
+//     const expected = orderedList.childElementCount;
+
+//     t.notEqual(result, expected)
+//     uncheck();
+// })
+
+
+
+
+
+// test("removeHidden removes class of hidden from an element", t => {
+//     removeHidden(document.querySelector(".todo__board"));
+//     const result = document.querySelector(".todo__board").classList.contains('hidden')
+//     const expected = true;
+
+//     t.equal(result,expected);
+// })
+
+// function check() {
+//     document.getElementById("myCheck").checked = true;
+// }
+
+// function uncheck() {
+//     document.getElementById("myCheck").checked = false;
+// }
