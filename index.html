@@ -1,73 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
 
     <title>TO-DO</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1 class="body__title">TO-DO</h1> 
-        <form class="input" role="search">
-            <label for="userInput"></label>
-            <input type="text" id="userInput"  class="input__task" role="new-task" placeholder="Add a task...">
-            <button type ="submit" class="submit__task" id="submitBtn">Add</button> 
-        </form> 
+      <h1 class="body__title">TO-DO</h1>
+      <form class="input" role="search">
+        <label for="userInput"></label>
+        <input
+          type="text"
+          id="userInput"
+          class="input__task"
+          role="new-task"
+          placeholder="Add a task..."
+        />
+        <button type="submit" class="submit__task" id="submitBtn">Add</button>
+      </form>
     </header>
-    
+
     <main>
-        <label for="file">Tasks progress</label>
-        <progress id="file" max="100" value="70"> 70% </progress>
+      <label for="file">Tasks progress</label>
+      <progress id="file" max="100" value="70"> 70% </progress>
 
-        <section class="todo__cards">
-            <section class="todo__cards--nav">
-                <section class="toggle__buttons">
-                    <button class="toggle__button todo__toggle">To-do</button>
-                    <button class="toggle__button finished__toggle">Finished</button>
-                </section>
-    
-                <form class="search__area" role="search">
-                    <label for="userSearchInput"></label>
-                    <input type="text" id="userSearchInput"  class="search__bar" role="searchbox" placeholder="Find...">
-                    <button type = "submit" class="search__icon"><i class="fas fa-search"></i></button> 
-                </form> 
-            </section>
-           
+      <section class="todo__cards">
+        <section class="todo__cards--nav">
+          <section class="toggle__buttons">
+            <button class="toggle__button todo__toggle">To-do</button>
+            <button class="toggle__button finished__toggle inactive__button">
+              Finished
+            </button>
+          </section>
 
-            <article class="todo__board">
-                <ol id="ordered__list"  class="todo">
-                    <li>Finish our project</li>
-                    <li>have a good evening</li>
-                </ol>
-            </article>
-
-            <article class="finished__board hidden" >
-                <ol class="finished">
-                    <li>FINSHED</li>
-                    <li>NO</li>
-                </ol>
-            </article>
-
+          <form class="search__area" role="search">
+            <label for="userSearchInput"></label>
+            <input
+              type="text"
+              id="userSearchInput"
+              class="search__bar"
+              role="searchbox"
+              placeholder="Find..."
+            />
+            <button type="submit" class="search__icon">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
         </section>
-       
-        <!-- <i class="fas fa-search"></i>
+
+        <article class="todo__board">
+          <ol id="ordered__list" class="todo">
+            <li>Finish our project</li>
+            <li>have a good evening</li>
+          </ol>
+        </article>
+
+        <article class="finished__board hidden">
+          <ol class="finished">
+            <li>FINSHED</li>
+            <li>NO</li>
+          </ol>
+        </article>
+      </section>
+
+      <!-- <i class="fas fa-search"></i>
         <i class="fas fa-trash-alt"></i>
          -->
     </main>
 
-    <footer>
-    </footer>
-    
+    <footer></footer>
+
     <script src="script.js"></script>
     <script src="test-helpers.js"></script>
     <script src="tests.js"></script>
-</body>
-
-
+  </body>
 </html>
