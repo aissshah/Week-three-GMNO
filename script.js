@@ -85,8 +85,11 @@ finishedButtonTog.addEventListener('keyup', (e) => {
 const addTask = document.getElementById('submitBtn') //refers to the submit button
 addTask.addEventListener('click', (event)=>{
     event.preventDefault(); 
-    const task = document.getElementById("userInput").value
-    addNewTask(task);
+    const task = document.getElementById("userInput").value;    
+    if (task) {
+        addNewTask(task);
+        document.querySelector('#userInput').value = '';
+    }    
 })
 
 //Delete task
