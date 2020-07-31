@@ -20,13 +20,13 @@
   <body>
     <header>
       <h1 class="body__title">TO-DO</h1>
-      <form class="input" role="search">
+      <form class="input" role="input">
         <label for="userInput"></label>
         <input
           type="text"
           id="userInput"
           class="input__task"
-          role="new-task"
+          role="input"
           placeholder="Add a task..."
         />
         <button type="submit" class="submit__task" id="submitBtn">Add</button>
@@ -40,8 +40,8 @@
       <section class="todo__cards">
         <section class="todo__cards--nav">
           <section class="toggle__buttons">
-            <button class="toggle__button todo__toggle">To-do</button>
-            <button class="toggle__button finished__toggle inactive__button">
+            <button class="toggle__button todo__toggle" aria-label="toggle-todo">To-do</button>
+            <button class="toggle__button finished__toggle inactive__button" aria-label="toggle-finished">
               Finished
             </button>
           </section>
@@ -52,10 +52,10 @@
               type="text"
               id="userSearchInput"
               class="search__bar"
-              role="searchbox"
+              role="search"
               placeholder="Find..."
             />
-            <button type="submit" class="search__icon">
+            <button type="submit" class="search__icon" aria-label="submit">
               <i class="fas fa-search"></i>
             </button>
           </form>
