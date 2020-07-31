@@ -140,10 +140,16 @@ progress[value]::-webkit-progress-value {
      line-height: 2.7rem;
      color: black;
      font-size: 1.5rem;
-     font-weight: bold;
+     font-weight: bold;https://prod.liveshare.vsengsaas.visualstudio.com/join?660CC9C84A365C440FB7D1D75D0903D3E80F
 }
 
 .hidden {
     display: none;
 }
 
+@media only screen and (min-width: 760px){
+ body {
+    width: 40vw;
+    /* margin: auto; */
+ }
+}
