@@ -12,9 +12,9 @@ const addNewTask = (text) => {
   checkBox.setAttribute("type", "checkbox");
   checkBox.setAttribute("id", "taskCheckbox" + taskNumber);
   checkBox.classList.add("check__box");
-  let userTask = document.createElement("label");
-
-  userTask.setAttribute("for", "taskCheckbox" + taskNumber);
+  checkBox.value = text;
+  // let userTask = document.createElement("label");
+  // userTask.setAttribute("for", "taskCheckbox" + taskNumber);
   let deleteBtn = document.createElement("button");
   let deleteIcon = document.createElement("i");
   deleteBtn.classList.add("delete__btn");
@@ -23,11 +23,15 @@ const addNewTask = (text) => {
   deleteBtn.appendChild(deleteIcon);
 
   //   deleteBtn.textContent = "delete";
-  userTask.innerHTML = text;
+  // userTask.innerHTML = text;
 
   fragment.appendChild(task);
-  task.appendChild(checkBox);
-  task.appendChild(userTask);
+
+  
+  task.textContent = text;
+  task.insertBefore(checkBox, task.firstChild);
+  // task.innerHTML = "<input type='checkbox' id='taskCheckbox'"+ taskNumber + "class='check__box/>" + text;
+  // task.appendChild(userTask);
   task.appendChild(deleteBtn);
 
   orderedList.appendChild(fragment);
@@ -53,9 +57,7 @@ const removeHidden = (elem) => {
 const todoSectionBoard = document.querySelector(".todo__board");
 const finishSectionBoard = document.querySelector(".finished__board");
 const todoButtonTog = document.getElementsByClassName("todo__toggle")[0];
-const finishedButtonTog = document.getElementsByClassName(
-  "finished__toggle"
-)[0];
+const finishedButtonTog = document.getElementsByClassName("finished__toggle")[0];
 todoButtonTog.addEventListener("click", () => {
   if (todoSectionBoard.classList.contains("hidden")) {
     removeHidden(todoSectionBoard);
@@ -109,7 +111,6 @@ orderedList.addEventListener("click", (event) => {
     const li = event.target.parentElement;
     orderedList.removeChild(li);
   }
- 
 });
 
 
@@ -128,6 +129,7 @@ orderedList.addEventListener("click", (event) => {
 const finishedSection = document.getElementById("finished")
 
 document.addEventListener("click", e => {
+  console.log(e.target.type)
     if (e.target.type === "checkbox"){
         if(e.target.checked) {
             orderedList.removeChild(e.target.parentElement)
