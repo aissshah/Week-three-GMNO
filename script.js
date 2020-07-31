@@ -20,6 +20,7 @@ const addNewTask = (text) => {
   deleteBtn.classList.add("delete__btn");
   deleteIcon.classList.add("fas");
   deleteIcon.classList.add("fa-trash-alt");
+  deleteBtn.setAttribute("aria-label", "delete");
   deleteBtn.appendChild(deleteIcon);
 
   //   deleteBtn.textContent = "delete";

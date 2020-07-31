@@ -2,7 +2,7 @@
   /* --grey : hsl(90, 1%, 59%);  */
   --grey: hsl(135, 19%, 88%);
   --dark-green: hsl(177, 20%, 61%);
-  --lighter-dark-green: hsl(177, 20%, 71%);
+  --lighter-dark-green: #bec9c8;
   --light-green: hsl(167, 40%, 82%);
   --apricot: hsl(24, 100%, 86%);
   --primary-font: "Nunito", sans-serif;
@@ -16,9 +16,6 @@ body {
   justify-content: space between;
   align-items: center;
   width: 100%;
-  /* background-color: var(); */
-
-  /* margin: 0 auto; */
 }
 
 .body__title {
@@ -77,8 +74,6 @@ progress[value]::-webkit-progress-value {
 .toggle__buttons {
   display: flex;
   justify-content: center;
-  /* align-items: flex-end;
-    align-items: center; */
 }
 
 .toggle__button {
@@ -119,7 +114,6 @@ progress[value]::-webkit-progress-value {
 
 /* ------- To-do cards ----------- */
 .todo__cards {
-  /* border: 2px solid black; */
   margin: 2rem auto;
   padding: 1rem;
   width: 80vw;
@@ -134,8 +128,6 @@ progress[value]::-webkit-progress-value {
   color: black;
   font-size: 1.5rem;
   font-weight: bold;
-  /* display: flex; */
-  /* justify-content: space-between; */
 }
 
 .hidden {
